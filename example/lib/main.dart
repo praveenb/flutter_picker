@@ -62,84 +62,84 @@ class _MyHomePageState extends State<MyHomePage> {
         child: ListView(
           children: <Widget>[
             (stateText != null) ? Text(stateText) : Container(),
-            RaisedButton(
+            ElevatedButton(
               child: Text('Picker Show'),
               onPressed: () {
                 showPicker(context);
               },
             ),
             SizedBox(height: listSpec),
-            RaisedButton(
+            ElevatedButton(
               child: Text('Picker Show Modal'),
               onPressed: () {
                 showPickerModal(context);
               },
             ),
             SizedBox(height: listSpec),
-            RaisedButton(
+            ElevatedButton(
               child: Text('Picker Show Icons'),
               onPressed: () {
                 showPickerIcons(context);
               },
             ),
             SizedBox(height: listSpec),
-            RaisedButton(
+            ElevatedButton(
               child: Text('Picker Show (Array)'),
               onPressed: () {
                 showPickerArray(context);
               },
             ),
             SizedBox(height: listSpec),
-            RaisedButton(
+            ElevatedButton(
               child: Text('Picker Show Number'),
               onPressed: () {
                 showPickerNumber(context);
               },
             ),
             SizedBox(height: listSpec),
-            RaisedButton(
+            ElevatedButton(
               child: Text('Picker Show Number FormatValue'),
               onPressed: () {
                 showPickerNumberFormatValue(context);
               },
             ),
             SizedBox(height: listSpec),
-            RaisedButton(
+            ElevatedButton(
               child: Text('Picker Show Date'),
               onPressed: () {
                 showPickerDate(context);
               },
             ),
             SizedBox(height: listSpec),
-            RaisedButton(
+            ElevatedButton(
               child: Text('Picker Show Datetime'),
               onPressed: () {
                 showPickerDateTime(context);
               },
             ),
             SizedBox(height: listSpec),
-            RaisedButton(
+            ElevatedButton(
               child: Text('Picker Show Date (Custom)'),
               onPressed: () {
                 showPickerDateCustom(context);
               },
             ),
             SizedBox(height: listSpec),
-            RaisedButton(
+            ElevatedButton(
               child: Text('Picker Show Datetime (24)'),
               onPressed: () {
                 showPickerDateTime24(context);
               },
             ),
             SizedBox(height: listSpec),
-            RaisedButton(
+            ElevatedButton(
               child: Text('Picker Show Datetime (Round background)'),
               onPressed: () {
                 showPickerDateTimeRoundBg(context);
               },
             ),
             SizedBox(height: listSpec),
-            RaisedButton(
+            ElevatedButton(
               child: Text('Picker Show Date Range'),
               onPressed: () {
                 showPickerDateRange(context);
@@ -243,7 +243,7 @@ class _MyHomePageState extends State<MyHomePage> {
         selecteds: [3, 0, 2],
         title: Text("Please Select"),
         selectedTextStyle: TextStyle(color: Colors.blue),
-        cancel: FlatButton(onPressed: () {
+        cancel: TextButton(onPressed: () {
           Navigator.pop(context);
         }, child: Icon(Icons.child_care)),
         onConfirm: (Picker picker, List value) {
@@ -393,12 +393,12 @@ class _MyHomePageState extends State<MyHomePage> {
     );
 
     List<Widget> actions = [
-      FlatButton(
+      TextButton(
           onPressed: () {
             Navigator.pop(context);
           },
           child: new Text(PickerLocalizations.of(context).cancelText)),
-      FlatButton(
+      TextButton(
           onPressed: () {
             Navigator.pop(context);
             ps.onConfirm(ps, ps.selecteds);

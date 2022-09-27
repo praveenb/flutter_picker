@@ -169,7 +169,7 @@ class Picker {
             String _cancelText =
                 cancelText ?? PickerLocalizations.of(context).cancelText;
             if (_cancelText != null && _cancelText != "") {
-              actions.add(FlatButton(
+              actions.add(TextButton(
                   onPressed: () {
                     Navigator.pop<List<int>>(context, null);
                     if (onCancel != null) onCancel();
@@ -187,7 +187,7 @@ class Picker {
             String _confirmText =
                 confirmText ?? PickerLocalizations.of(context).confirmText;
             if (_confirmText != null && _confirmText != "") {
-              actions.add(FlatButton(
+              actions.add(TextButton(
                   onPressed: () {
                     Navigator.pop<List<int>>(context, selecteds);
                     if (onConfirm != null) onConfirm(this, selecteds);
@@ -391,7 +391,7 @@ class PickerWidgetState<T> extends State<_PickerWidget> {
       String _cancelText =
           picker.cancelText ?? PickerLocalizations.of(context).cancelText;
       if (_cancelText != null || _cancelText != "") {
-        items.add(FlatButton(
+        items.add(TextButton(
             onPressed: () {
               picker.doCancel(context);
             },
@@ -412,7 +412,7 @@ class PickerWidgetState<T> extends State<_PickerWidget> {
               : DefaultTextStyle(
               style: TextStyle(
                   fontSize: Picker.DefaultTextSize,
-                  color: theme.textTheme.title.color),
+                  color: theme.textTheme.subtitle1.color),
               child: picker.title),
         )));
 
@@ -426,7 +426,7 @@ class PickerWidgetState<T> extends State<_PickerWidget> {
       String _confirmText =
           picker.confirmText ?? PickerLocalizations.of(context).confirmText;
       if (_confirmText != null || _confirmText != "") {
-        items.add(FlatButton(
+        items.add(TextButton(
             onPressed: () {
               picker.doConfirm(context);
             },
